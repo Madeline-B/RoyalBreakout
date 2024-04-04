@@ -6,24 +6,22 @@ public class handleLock : MonoBehaviour
 {
     public Transform dial1;
     public int dial1Value = 1;
+    private int dial1Combination = 6;
 
     public Transform dial2;
     public int dial2Value = 1;
+    private int dial2Combination = 1;
 
     public Transform dial3;
     public int dial3Value = 1;
+    private int dial3Combination = 3;
+
+    public GameObject yesLight;
 
 
-    // Start is called before the first frame update
-    void Start()
+    private void Update()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        yesLight.SetActive(checkDials());
     }
 
     public void rotateDial1()
@@ -51,5 +49,10 @@ public class handleLock : MonoBehaviour
 
         if (dial3Value > 6)
             dial3Value = 1;
+    }
+
+    public bool checkDials()
+    {
+        return (dial1Value == dial1Combination && dial2Value == dial2Combination && dial3Value == dial3Combination);
     }
 }
