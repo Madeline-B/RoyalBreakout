@@ -20,16 +20,12 @@ public class CheckSockets : MonoBehaviour
     bool isGreenCorrect;
     bool isYellowCorrect;
 
-    public void Start()
-    {
-
+    public void Start(){
         isBlueCorrect = false;
         isRedCorrect = false;
         isPurpleCorrect = false;
         isGreenCorrect = false;
         isYellowCorrect = false;
-
-       
     }
 
 
@@ -42,7 +38,7 @@ public class CheckSockets : MonoBehaviour
         IXRSelectInteractable purple = SocketPurple.GetOldestInteractableSelected();
         IXRSelectInteractable green = SocketGreen.GetOldestInteractableSelected();
         IXRSelectInteractable yellow = SocketYellow.GetOldestInteractableSelected();
-      
+ 
         if(blue != null && blue.transform.CompareTag("Blue") ){
             Debug.Log(blue.transform.tag + " in socket of " + transform.tag);
             isBlueCorrect = true;
