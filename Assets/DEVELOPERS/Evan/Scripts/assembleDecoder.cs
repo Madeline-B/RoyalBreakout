@@ -12,7 +12,6 @@ public class assembleDecoder : MonoBehaviour
     public bool partBuilt;
     public GameObject[] pieces;
     public GameObject decoderObject;
-    public GameObject light;
 
     // Update is called once per frame
     void Update()
@@ -52,7 +51,6 @@ public class assembleDecoder : MonoBehaviour
             partBuilt = true;
 
             decoderObject.SetActive(true);
-            light.SetActive(true);
 
             foreach (GameObject each in pieces)
             {
