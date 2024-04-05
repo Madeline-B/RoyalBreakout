@@ -10,6 +10,11 @@ TagManager:
   - Purple
   - Green
   - Yellow
+  - piece1
+  - piece3
+  - piece2
+  - piece4
+  - Key
   layers:
   - Default
   - TransparentFX
