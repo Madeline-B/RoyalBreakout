@@ -17,6 +17,9 @@ TagManager:
   - Key
   - box
   - Thrownroomtp
+  - Club
+  - Rope
+  - Sickle
   layers:
   - Default
   - TransparentFX

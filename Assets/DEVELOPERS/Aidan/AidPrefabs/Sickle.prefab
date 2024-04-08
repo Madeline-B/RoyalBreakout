@@ -17,10 +17,10 @@ GameObject:
   - component: {fileID: 7319138335400507456}
   - component: {fileID: 3204563778079628969}
   - component: {fileID: 7424297463416450092}
-  - component: {fileID: 9149315042170424494}
+  - component: {fileID: 2088568373290802471}
   m_Layer: 0
   m_Name: Sickle
-  m_TagString: Untagged
+  m_TagString: Sickle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -932,7 +932,7 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
---- !u!114 &9149315042170424494
+--- !u!114 &2088568373290802471
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -941,7 +941,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2747594300503499385}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60523e0647cc6ab43acc73cb266a32a7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1dd697a3ba1847c45872be482a7a5950, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_InteractionManager: {fileID: 0}
@@ -992,6 +992,7 @@ MonoBehaviour:
   m_SocketScaleMode: 0
   m_FixedScale: {x: 1, y: 1, z: 1}
   m_TargetBoundsSize: {x: 1, y: 1, z: 1}
+  targetTag: Key
 --- !u!1 &7395255844863713014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,10 +1048,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7673568989426291137}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.2987991, y: -0.57129925, z: -0.5680009, w: 0.51157737}
-  m_LocalPosition: {x: 0.095, y: 0.183, z: 0.463}
+  m_LocalRotation: {x: -0.8632021, y: -0.48394632, z: 0.13874985, w: -0.037768494}
+  m_LocalPosition: {x: 0.037, y: 0.038, z: 0.518}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5115898387822255434}
-  m_LocalEulerAnglesHint: {x: -20.077, y: -79.654, z: -79.188}
+  m_LocalEulerAnglesHint: {x: 11.508, y: -168.045, z: 122.655}
