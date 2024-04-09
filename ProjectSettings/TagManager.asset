@@ -20,7 +20,6 @@ TagManager:
   - Club
   - Rope
   - Sickle
-  - Rook
   layers:
   - Default
   - TransparentFX
