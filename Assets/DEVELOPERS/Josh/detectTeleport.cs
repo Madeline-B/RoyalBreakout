@@ -16,7 +16,6 @@ public class detectTeleport : MonoBehaviour
     {
         if (hit.gameObject.CompareTag("box"))
         {
-            print("hit box");
             transform.position = GameObject.FindWithTag("Thrownroomtp").transform.position;
             transform.rotation = GameObject.FindWithTag("Thrownroomtp").transform.rotation;
         }

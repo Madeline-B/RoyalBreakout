@@ -7,6 +7,9 @@ public class gameScript : MonoBehaviour
     public bool cellUnlocked = false;
     public bool lockSolved = false;
     public bool inDungeonRoom = false;
+    public bool gemPuzzleSolved = false;
+    public bool chessPuzzleSolved = false;
+    public bool decoderMade = false;
 
     public GameObject dungeonTeleportArea;
 
