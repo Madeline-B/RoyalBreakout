@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class UnlockLock : MonoBehaviour
 {
+    public gameScript game;
 
     private void OnCollisionEnter(Collision collision) {
         if(collision.gameObject.CompareTag("Key")) {
             Destroy(gameObject);
+            game.UnlockCell();
         }
     }
 }

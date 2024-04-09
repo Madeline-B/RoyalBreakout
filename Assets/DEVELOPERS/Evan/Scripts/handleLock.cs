@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class handleLock : MonoBehaviour
 {
+    public gameScript game;
+
     public Transform dial1;
     public int dial1Value = 1;
     private int dial1Combination = 6;
@@ -18,6 +20,7 @@ public class handleLock : MonoBehaviour
 
     public GameObject yesLight;
 
+    bool firstTimeUnlocked = true;
 
     private void Update()
     {
@@ -53,6 +56,15 @@ public class handleLock : MonoBehaviour
 
     public bool checkDials()
     {
-        return (dial1Value == dial1Combination && dial2Value == dial2Combination && dial3Value == dial3Combination);
+        if (dial1Value == dial1Combination && dial2Value == dial2Combination && dial3Value == dial3Combination)
+        {
+            if (firstTimeUnlocked)
+            {
+                firstTimeUnlocked = false;
+                game.lockSolved = true;
+            }
+            return true;
+        }
+        return false;
     }
 }
