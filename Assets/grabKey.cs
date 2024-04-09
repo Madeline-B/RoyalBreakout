@@ -17,11 +17,12 @@ public class grabKey : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        print(Vector3.Distance(transform.position, key.transform.position));
         if(Vector3.Distance(transform.position, key.transform.position) < 0.4f)
         {
             Vector3 dir = Vector3.Normalize(transform.position - key.transform.position);
 
-            rb.AddForce(dir * 10, ForceMode.Force);
+            rb.AddForce(dir * 7f, ForceMode.Force);
         }
     }
 }
