@@ -15,9 +15,12 @@ public class LockFSM : MonoBehaviour
     private Animator animator;
     private Rigidbody rb;
     private XRGrabInteractable interactable;
+    public GameObject Door;
+    private Rigidbody doorRB;
     
     void Start()
     {
+        doorRB = Door.GetComponent<Rigidbody>();
         rb = GetComponent<Rigidbody>();
         animator = GetComponentInChildren<Animator>();
         State = LockStateType.CLOSED;
@@ -32,6 +35,7 @@ public class LockFSM : MonoBehaviour
 
             case LockStateType.OPENING:
                 animator.Play("LockUnlock");
+                doorRB.constraints = RigidbodyConstraints.None;
                 //SoundManager.Instance.Play(SoundType.SOLVED);
                 ChangeState(LockStateType.OPEN);
                 break;
