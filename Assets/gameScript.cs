@@ -14,6 +14,7 @@ public class gameScript : MonoBehaviour
 
     // The teleport area object in the dungeon
     public GameObject dungeonTeleportArea;
+    public GameObject victory;
 
     float timeOfStart;
 
@@ -23,11 +24,25 @@ public class gameScript : MonoBehaviour
         timeOfStart = Time.time;
     }
 
+    void Update()
+    {
+        if (decoderMade && gemPuzzleSolved)
+        {
+            print("!!!");
+            victory.SetActive(true);
+        }    
+    }
+
     public void UnlockCell()
     {
         cellUnlocked = true;
 
         print("You can now teleport");
         dungeonTeleportArea.SetActive(true);
+    }
+
+    public void finishChess()
+    {
+        chessPuzzleSolved = true;
     }
 }

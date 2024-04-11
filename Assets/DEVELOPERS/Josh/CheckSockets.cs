@@ -68,7 +68,6 @@ public class CheckSockets : MonoBehaviour
             print("puzzel complete");
             game.gemPuzzleSolved = true;
             Destroy(hiddenWall);
-            breaksound.Play();
         }
         
 
