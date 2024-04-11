@@ -7,6 +7,7 @@ using UnityEngine.XR.Interaction.Toolkit;
 
 public class CheckSockets : MonoBehaviour
 {
+    AudioSource breaksound;
     public XRSocketInteractor SocketBlue;
     public XRSocketInteractor SocketRed;
     public XRSocketInteractor SocketPurple;
@@ -67,6 +68,7 @@ public class CheckSockets : MonoBehaviour
             print("puzzel complete");
             game.gemPuzzleSolved = true;
             Destroy(hiddenWall);
+            breaksound.Play();
         }
         
 
