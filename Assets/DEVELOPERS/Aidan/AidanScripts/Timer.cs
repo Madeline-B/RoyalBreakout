@@ -8,6 +8,8 @@ public class Timer : MonoBehaviour
     public TextMeshPro textMeshPro;
     public float initialTime; // 18000 is 30 minutes in seconds 
 
+    public GameObject gameOverScreen;
+
     private float currentTime;
     private bool isCountingDown = true;
 
@@ -15,6 +17,7 @@ public class Timer : MonoBehaviour
         currentTime = initialTime;
         UpdateText();
         StartCoroutine(Countdown());
+        gameOverScreen.SetActive(false);
     }
 
     IEnumerator Countdown() {
@@ -40,6 +43,7 @@ public class Timer : MonoBehaviour
 
     // put what we want to happen in here
     private void OnTimerEnd() {
+        gameOverScreen.SetActive(true);
         Debug.Log("Timer has reached zero.");
     }
 }
