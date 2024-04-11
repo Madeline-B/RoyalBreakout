@@ -14,7 +14,6 @@ public class CheckSockets : MonoBehaviour
     public XRSocketInteractor SocketYellow;
     public GameObject hiddenWall;
 
-    AudioSource breaksound;
     public gameScript game;
 
     bool isBlueCorrect;
@@ -68,7 +67,6 @@ public class CheckSockets : MonoBehaviour
             print("puzzel complete");
             game.gemPuzzleSolved = true;
             Destroy(hiddenWall);
-            breaksound.Play();
         }
         
 
