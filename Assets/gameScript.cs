@@ -7,7 +7,7 @@ public class gameScript : MonoBehaviour
     // booleans for states of multiple puzzles throughout the escape room
     public bool cellUnlocked = false;
     public bool lockSolved = false;
-    public bool inDungeonRoom = false;
+    public bool inThroneRoom = false;
     public bool gemPuzzleSolved = false;
     public bool chessPuzzleSolved = false;
     public bool decoderMade = false;
