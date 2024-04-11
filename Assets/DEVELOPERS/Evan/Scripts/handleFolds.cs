@@ -10,15 +10,29 @@ public class handleFolds : MonoBehaviour
 
     private int currentIndex = 0;
     private float timeOfGrab = 0f;
+    bool first = false;
 
 
     void Update()
     {
-        if (Time.time - timeOfGrab > 3f && isHeld)
+        if (!first)
         {
-            ChangeModel();
-            timeOfGrab = Time.time;
-        }    
+            if (Time.time - timeOfGrab > 11f && isHeld)
+            {
+                ChangeModel();
+                timeOfGrab = Time.time;
+                first = true;
+            }
+        }
+        else
+        {
+            if (Time.time - timeOfGrab > 1.5f && isHeld)
+            {
+                ChangeModel();
+                timeOfGrab = Time.time;
+            }
+        }
+        
     }
 
     public void isBeingHeld()

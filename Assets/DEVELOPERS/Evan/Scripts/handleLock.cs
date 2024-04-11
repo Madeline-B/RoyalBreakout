@@ -18,13 +18,17 @@ public class handleLock : MonoBehaviour
     public int dial3Value = 1;
     private int dial3Combination = 3;
 
-    public GameObject yesLight;
+    public GameObject blockingDoor;
+
 
     bool firstTimeUnlocked = true;
 
     private void Update()
     {
-        yesLight.SetActive(checkDials());
+        if (blockingDoor.active && checkDials())
+        {
+            blockingDoor.SetActive(false);
+        }
     }
 
     public void rotateDial1()
