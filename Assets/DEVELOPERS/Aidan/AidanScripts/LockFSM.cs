@@ -41,7 +41,7 @@ public class LockFSM : MonoBehaviour
                 animator.Play("LockUnlock");
                 lockrb.constraints = RigidbodyConstraints.None;
                 doorRB.constraints = RigidbodyConstraints.None;
-                soundManager.Instance.Play(1);
+                soundManager.Instance.Play(SoundType.LOCKSOLVED);
                 ChangeState(LockStateType.OPEN);
                 break;
 
