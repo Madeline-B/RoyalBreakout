@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3864,6 +3864,10 @@ PrefabInstance:
       propertyPath: Door
       value: 
       objectReference: {fileID: 1248876554}
+    - target: {fileID: 7651005254969706953, guid: 0bd82030f5a18ec45999a13c3f097c23, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1552539889}
     - target: {fileID: 7996312536832814023, guid: 0bd82030f5a18ec45999a13c3f097c23, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -31014,7 +31018,6 @@ GameObject:
   - component: {fileID: 1248876558}
   - component: {fileID: 1248876557}
   - component: {fileID: 1248876556}
-  - component: {fileID: 1248876560}
   - component: {fileID: 1248876559}
   - component: {fileID: 1248876561}
   - component: {fileID: 1248876562}
@@ -31138,19 +31141,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 126
   m_CollisionDetection: 2
---- !u!114 &1248876560
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1248876554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1f75ff572d19c44438217609f02303d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  game: {fileID: 1552539889}
 --- !u!65 &1248876561
 BoxCollider:
   m_ObjectHideFlags: 0

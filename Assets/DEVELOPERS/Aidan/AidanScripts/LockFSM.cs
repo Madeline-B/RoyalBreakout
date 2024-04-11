@@ -18,7 +18,7 @@ public class LockFSM : MonoBehaviour
     public GameObject Door;
     private Rigidbody doorRB;
 
-    //public GameObject teleportationField;
+    public gameScript game;
     
     void Start()
     {
@@ -27,8 +27,6 @@ public class LockFSM : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
         State = LockStateType.CLOSED;
         interactable = GetComponent<XRGrabInteractable>();
-
-        //teleportationField = teleportationField.GetComponent<TeleportationArea>();
     }
 
     void Update()
@@ -43,12 +41,12 @@ public class LockFSM : MonoBehaviour
                 doorRB.constraints = RigidbodyConstraints.None;
                 soundManager.Instance.Play(SoundType.LOCKSOLVED);
                 ChangeState(LockStateType.OPEN);
+                game.UnlockCell();
                 break;
 
             case LockStateType.OPEN:
                 lockrb.useGravity = true;
                 interactable.enabled = true;
-                //teleportationField.enabled = true;
                 break;
         }
     }
