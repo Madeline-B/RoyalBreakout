@@ -14,7 +14,7 @@ public class handleFolds : MonoBehaviour
 
     void Update()
     {
-        if (Time.time - timeOfGrab > 2f && isHeld)
+        if (Time.time - timeOfGrab > 3f && isHeld)
         {
             ChangeModel();
             timeOfGrab = Time.time;
