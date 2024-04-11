@@ -14,6 +14,7 @@ public enum SoundType
     //CLICK,
     //SOLVED,
     SOCKET=0,
+    LOCKSOLVED = 1,
 }
 
 //we use this to get random varing sound volumes
@@ -81,7 +82,8 @@ public class soundManager : MonoBehaviour{
         sounds = new()
         {
             //this line should be repeated and the file path should be in the new() with the filename included in the path. it Starts in the Resources so if your file is already there just put the name
-            {SoundType.SOCKET, new("socket") }
+            {SoundType.SOCKET, new("socket") },
+            {SoundType.LOCKSOLVED, new("lockUnlock") }
         };
     }
      
