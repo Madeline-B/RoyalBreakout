@@ -5,6 +5,7 @@ using UnityEngine;
 public class detectTeleport : MonoBehaviour
 {
     public GameObject player;
+    public gameScript game;
 
     private void Start()
     {
@@ -14,8 +15,9 @@ public class detectTeleport : MonoBehaviour
 
     private void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        if (hit.gameObject.CompareTag("box"))
+        if (game.lockSolved && hit.gameObject.CompareTag("box"))
         {
+            game.inDungeonRoom = true;
             transform.position = GameObject.FindWithTag("Thrownroomtp").transform.position;
             transform.rotation = GameObject.FindWithTag("Thrownroomtp").transform.rotation;
         }

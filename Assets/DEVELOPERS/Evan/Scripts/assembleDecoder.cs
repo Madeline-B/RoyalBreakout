@@ -7,7 +7,6 @@ public class assembleDecoder : MonoBehaviour
     public bool piece1In;
     public bool piece2In;
     public bool piece3In;
-    public bool piece4In;
 
     public bool partBuilt;
     public GameObject[] pieces;
@@ -29,8 +28,6 @@ public class assembleDecoder : MonoBehaviour
             piece2In = true;
         if (collision.transform.tag == "piece3")
             piece3In = true;
-        if (collision.transform.tag == "piece4")
-            piece4In = true;
     }
 
     private void OnCollisionExit(Collision collision)
@@ -41,15 +38,13 @@ public class assembleDecoder : MonoBehaviour
             piece2In = false;
         if (collision.transform.tag == "piece3")
             piece3In = false;
-        if (collision.transform.tag == "piece4")
-            piece4In = false;
     }
 
     void checkForDecoderAssembly()
     {
-        if (piece1In && piece2In && piece3In && piece4In)
+        if (piece1In && piece2In && piece3In)
         {
-            piece1In = false; piece2In = false; piece3In = false; piece4In = false;
+            piece1In = false; piece2In = false; piece3In = false;
             partBuilt = true;
             game.decoderMade = true;
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class gameScript : MonoBehaviour
 {
+    // booleans for states of multiple puzzles throughout the escape room
     public bool cellUnlocked = false;
     public bool lockSolved = false;
     public bool inDungeonRoom = false;
@@ -11,18 +12,15 @@ public class gameScript : MonoBehaviour
     public bool chessPuzzleSolved = false;
     public bool decoderMade = false;
 
+    // The teleport area object in the dungeon
     public GameObject dungeonTeleportArea;
+
+    float timeOfStart;
 
     // Start is called before the first frame update
     void Start()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
+        timeOfStart = Time.time;
     }
 
     public void UnlockCell()

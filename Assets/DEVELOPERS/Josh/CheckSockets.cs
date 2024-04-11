@@ -14,6 +14,8 @@ public class CheckSockets : MonoBehaviour
     public XRSocketInteractor SocketYellow;
     public GameObject hiddenWall;
 
+    public gameScript game;
+
     bool isBlueCorrect;
     bool isRedCorrect;
     bool isPurpleCorrect;
@@ -63,6 +65,7 @@ public class CheckSockets : MonoBehaviour
         //each time an item is socketed is checks every socket
         if(isBlueCorrect && isRedCorrect && isPurpleCorrect && isGreenCorrect && isYellowCorrect){
             print("puzzel complete");
+            game.gemPuzzleSolved = true;
             Destroy(hiddenWall);
         }
         
